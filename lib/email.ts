@@ -36,7 +36,7 @@ class EmailService {
     }
 
     if (config.auth.user && config.auth.pass) {
-      this.transporter = nodemailer.createTransporter(config)
+      this.transporter = nodemailer.createTransport(config)
     } else {
       console.warn('⚠️ SMTP credentials not configured. Email notifications will be logged only.')
     }
